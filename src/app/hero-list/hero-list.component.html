@@ -1,6 +1,19 @@
-<h2>Liste des Super-Héros</h2>
-<ul>
-  <li *ngFor="let hero of heroes">
-    <strong>{{ hero.name }}</strong> - {{ hero.power }}
-  </li>
-</ul>
+<h2 class="title">Liste des Super-Héros</h2>
+
+<!-- Liste des "cartes" -->
+<div class="grid">
+  <div *ngFor="let hero of heroes" class="card">
+    <img [src]="hero.images.md" [alt]="hero.name" class="hero-img" />
+    <h3 class="hero-name">{{ hero.name }}</h3>
+
+    <!-- Stats -->
+    <div class="stats">
+      <p><strong>Intelligence:</strong> {{ hero.powerstats?.intelligence || 'N/A' }}</p>
+      <p><strong>Force:</strong> {{ hero.powerstats?.strength || 'N/A' }}</p>
+      <p><strong>Vitesse:</strong> {{ hero.powerstats?.speed || 'N/A' }}</p>
+      <p><strong>Durabilité:</strong> {{ hero.powerstats?.durability || 'N/A' }}</p>
+      <p><strong>Puissance:</strong> {{ hero.powerstats?.power || 'N/A' }}</p>
+      <p><strong>Combat:</strong> {{ hero.powerstats?.combat || 'N/A' }}</p>
+    </div>
+  </div>
+</div>

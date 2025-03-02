@@ -1,0 +1,55 @@
+/* Titre */
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* Conteneur de la grille */
+.grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+
+  /* Responsive: 2 colonnes sur petit écran, 3 sur moyen, 4 sur grand */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Style des rectangles */
+.card {
+  background: #222;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Image */
+.hero-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 10px;
+}
+
+/* Nom */
+.hero-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Stats */
+.stats p {
+  font-size: 14px;
+  margin: 3px 0;
+}
