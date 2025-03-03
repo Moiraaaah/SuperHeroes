@@ -1,8 +1,16 @@
-<h2 class="title">Liste des Super-Héros</h2>
+<h2 class="title">Super-Héros</h2>
+
+<!-- Barre de recherche -->
+<input
+  type="text"
+  placeholder="Rechercher un héros..."
+  class="search-bar"
+  [(ngModel)]="search"
+  (ngModelChange)="filterHeroes()"/>
 
 <!-- Liste des "cartes" -->
 <div class="grid">
-  <div *ngFor="let hero of heroes" class="card">
+  <div *ngFor="let hero of filteredHeroes" class="card">
     <img [src]="hero.images.md" [alt]="hero.name" class="hero-img" />
     <h3 class="hero-name">{{ hero.name }}</h3>
 
